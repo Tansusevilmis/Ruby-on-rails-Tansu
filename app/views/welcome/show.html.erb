@@ -1,8 +1,14 @@
 Hier wil ik een twitter feed
 
 <% for tweet in @tweets %>
+<div class="hero">
+  <p class="pull-left">
   <img src="<%= tweet.user.profile_image_url %>" />
-  
-  <h1><%= tweet.text %></h1>
+  </p>
+  <div class="container ac">
+  <h3><%= tweet.user.url %></h3>
+  <%= tweet.text %>
+  </div>
+</div>
   <br />
 <% end -%>
